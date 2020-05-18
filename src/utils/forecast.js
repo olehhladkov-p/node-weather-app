@@ -14,10 +14,10 @@ const forecast = ({ latitude, longitude }, callback) => {
         return;
       }
 
-      callback(
-        undefined,
-        `${data.current.weather_descriptions[0]}. It is currently ${data.current.temperature} degrees out. It feels like ${data.current.feelslike} degrees out`,
-      );
+      callback(undefined, {
+        message: `${data.current.weather_descriptions[0]}. It is currently ${data.current.temperature} degrees out. It feels like ${data.current.feelslike} degrees out. The humidity is ${data.current.humidity} %.`,
+        location: `${data.location.name}, ${data.location.region}, ${data.location.country}`,
+      });
     })
     .catch(() => {
       callback('Unable to connect to weather service!', undefined);
