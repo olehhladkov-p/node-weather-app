@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 16px;
+  font-family: Arial;
+  color: #333;
+}
+
+.wrapper {
+  flex-grow: 1;
+}
+
+header {
+  margin: 16px 0 48px;
+}
+
+nav a {
+  margin-right: 16px;
+  color: #888;
+  text-decoration: none;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: 64px;
+}
+
+.avatar {
+  width: 250px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 8px;
+  color: #fff;
+  border: 1px solid #888;
+  background-color: #888;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 16px;
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+  color: #888;
+}
