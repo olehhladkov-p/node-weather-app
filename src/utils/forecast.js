@@ -16,7 +16,7 @@ const forecast = ({ latitude, longitude }, callback) => {
 
       callback(undefined, {
         message: `${data.current.weather_descriptions[0]}. It is currently ${data.current.temperature} degrees out. It feels like ${data.current.feelslike} degrees out. The humidity is ${data.current.humidity} %.`,
-        location: `${data.location.name}, ${data.location.region}, ${data.location.country}`,
+        location: `${data.location.region}, ${data.location.country}`,
       });
     })
     .catch(() => {
